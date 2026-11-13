@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Planner | Emmanuel Samuel Edem</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">E.S.<span>Edem</span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html" class="active">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="page-title">Academic Task Planner</h1>
+      <p class="page-subtitle">Organize Miva Open University assignments, lab practicals, and study goals</p>
+
+      <div class="planner-wrapper card">
+        <!-- Task Input Form -->
+        <form id="taskForm" class="planner-form">
+          <input type="text" id="taskInput" placeholder="Enter academic task (e.g., Submit COS 106 GitHub Link)..." aria-label="Task description">
+          <select id="courseSelect" aria-label="Course code">
+            <option value="COS 106">COS 106 (Web Tech)</option>
+            <option value="CYB 101">CYB 101 (Intro to Cyber)</option>
+            <option value="MTH 101">MTH 101 (Mathematics)</option>
+            <option value="GST 101">GST 101 (General Studies)</option>
+          </select>
+          <button type="submit" class="btn btn-primary">Add Task</button>
+        </form>
+        <p id="plannerError" class="error-msg"></p>
+
+        <!-- Summary Counters -->
+        <div class="planner-stats">
+          <span>Total Tasks: <strong id="totalCount">0</strong></span>
+          <span>Completed: <strong id="completedCount">0</strong></span>
+          <span>Pending: <strong id="pendingCount">0</strong></span>
+        </div>
+
+        <!-- Dynamic Task List -->
+        <ul id="taskList" class="task-list"></ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2026 Emmanuel Samuel Edem (2025/C/CYB/1167) | Miva Open University</p>
+      <p>Email: <a href="mailto:e.edem9827@miva.ng">e.edem9827@miva.ng</a></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
